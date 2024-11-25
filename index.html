@@ -84,7 +84,7 @@
                 let content =
                     `<div class="infowindow"><div class="name">${data.name}</div>
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "\"")}')">MORE INFO</div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "\\\"")}')">MORE INFO</div>
 <div class="images">${images}</div></div>`
                 var infowindow = new naver.maps.InfoWindow({
                     content: content
