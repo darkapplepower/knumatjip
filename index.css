@@ -83,8 +83,12 @@ html{
     text-align:center;
 }
 #popupinner{
-    height:60vh;
+    height:40vh;
+    line-height: 1.8;
     text-align: left;
+}
+#popupimage{
+    height: 20vh;
 }
 #popupbutton{
     height:5vh;
