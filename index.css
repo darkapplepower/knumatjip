@@ -84,6 +84,7 @@ html{
 }
 #popupinner{
     height:60vh;
+    text-align: left;
 }
 #popupbutton{
     height:5vh;
