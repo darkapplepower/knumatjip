@@ -13,7 +13,15 @@
 </head>
 
 <body>
-    <div id="bar"></div>
+    <div id="bar">
+        <div id="select">
+            <div class="checkbox">vietnam<input id="vietnam" checked /></div>
+            <div class="checkbox">korean<input id="korean" checked /></div>
+            <div class="checkbox">american<input id="american" checked /></div>
+            <div class="checkbox">japanese<input id="japanese" checked /></div>
+            <div class="checkbox">chinese<input id="chinese" checked /></div>
+        </div>
+    </div>
     <div id="map"></div>
     <div id="popup">
         <div id="popuptitle"></div>
@@ -24,6 +32,7 @@
     <script>
         //(async function () {
             const infs = [];
+            const markerlist=[];
             var mapOptions = {
                 center: new naver.maps.LatLng(37.86897, 127.7449),
                 zoom: 16,
@@ -70,6 +79,7 @@
                     position: new naver.maps.LatLng(data.y, data.x),
                     map: map
                 });
+                markerlist.push([data.category, marker]);
                 let images=data.images.map(x => `<image class="scinner" src="${x}">`).join("");
                 let content =
                     `<div class="infowindow"><div class="name">${data.name}</div>

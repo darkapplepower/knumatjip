@@ -9,21 +9,24 @@ Taste: You can experience the authentic taste of Japanese mazesoba.
 Service: Self-service 
 Recommend dishes:  마제소바(mazesoba)
 One line review: The price is a bit high, but the taste is definitely worth it.`,
-        "placeid": "1110384743"
+        "placeid": "1110384743",
+        "category": "japanese"
     },
     {
         "addressko": "강원 춘천시 서부대성로227번길 24 2층",
         "addressen":"631 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Omeulhouse",
         "des": "설명을 입력해주세요\n설명을 입력해주세요",
-        "placeid":"1001952255"
+        "placeid":"1001952255",
+        "category": "japanese"
     },
     {
         "addressko": "강원 춘천시 서부대성로 228 2층",
         "addressen":"627-9 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Noran",
         "des": "설명을 입력해주세요\n설명을 입력해주세요",
-        "placeid": "37643007"
+        "placeid": "37643007",
+        "category": "japanese"
     },
     {
         "addressko": "강원 춘천시 효자2동 183-6",
@@ -35,7 +38,8 @@ Taste: It taste like old Jjajangmyeon.
 Service: Water and Side dishes are self-service. Payment is made at once.
 Recommend dishes:Jjajangmyeon
 One line review: Spicy Jjajangmyeon is not recommended for Americans because it is very spicy.`,
-        "placeid": "1905636805"
+        "placeid": "1905636805",
+        "category": "chinese"
     },
     {
         "addressko": "강원 춘천시 서부대성로227번길 24",
@@ -47,7 +51,8 @@ Taste:  The taste of food made by grandma.
 Service: The boss acts like a grandma.
 Recommend dishes: Kimchi Fried Rice
 One line review: The  cheapest and most plentiful restaurant.`,
-        "placeid": "38275822"
+        "placeid": "38275822",
+        "category": "korean"
     },
     {
         "addressko": "강원 춘천시 백령로138번길 35",
@@ -59,7 +64,8 @@ Taste: The bulgogi has a smoky flavor
 Service: Naengmyeon, soybean paste soup, and wrapped vegetables are served.
 Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bolgogi set meal
 One line review: You can taste a varety of foods by ordering just one dish.`,
-        "placeid": "37127882"
+        "placeid": "37127882",
+        "category": "korean"
     },
     {
         "addressko": "강원 춘천시 서부대성로 222 1층",
@@ -71,7 +77,8 @@ Taste: It’s like a healthy Amercan burger.
 Service: Maclaren Burger is a self-service restaurant.
 Recommend dishes: fresh burger, nashville hot chicken burger
 One line review:  You can feel nostalgic by eating food from another country.`,
-        "placeid": "1944716264"
+        "placeid": "1944716264",
+        "category": "american"
     },
     {
         "addressko": "강원 춘천시 애막골길7번길 26 1층",
@@ -83,7 +90,8 @@ Taste: The noodles are chewy, and the broth has a rich, deep flavor.
 Service: Grilled eggs are served as a side dish.
 Recommend dishes:  순한 맛(mild taste), Order rice and eat it with chicken noodles
 One line review: This restaurant offers a filling meal at a reasonable price.`,
-        "placeid": "1575958333"
+        "placeid": "1575958333",
+        "category": "korean"
     },
     {
         "addressko": "강원 춘천시 백령로 19",
@@ -95,6 +103,7 @@ Taste: It contains rice noodles, which are easy on the stomach, and the broth is
 Service: Kimchi
 Recommend dishes:  rice noodles
 One line review: A perfect example of Vietnamese pho`,
-        "placeid": "1459347495"
+        "placeid": "1459347495",
+        "category": "vietnam"
     }
 ]
