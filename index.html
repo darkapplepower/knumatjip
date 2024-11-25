@@ -35,6 +35,18 @@
         //(async function () {
             const infs = [];
             const markerlist=[];
+            let checkbox=document.getElementsByClassName("checkbox");
+            for(let i of checkbox){
+                let text = i.innerText;
+                let rcheckbox = i.querySelector("input");
+                rcheckbox.addEventListener("change", ()=>{
+                    markerlist.forEach(x=>{
+                        if(text == x[0]){
+                            x[1].setVisible(checkbox.checked);
+                        }
+                    })
+                })
+            }
             var mapOptions = {
                 center: new naver.maps.LatLng(37.86897, 127.7449),
                 zoom: 16,
