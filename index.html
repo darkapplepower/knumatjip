@@ -18,6 +18,7 @@
     <div id="popup">
         <div id="popuptitle"></div>
         <div id="popupinner"></div>
+        <div id="popupimage" class="images"></div>
         <div id="popupbutton">CLOSE</div>
     </div>
     <script>
@@ -57,9 +58,11 @@
             const popup=document.getElementById("popup");
             const popuptext = document.getElementById("popupinner");
             const popuptitle=document.getElementById("popuptitle");
-            function displayinfo(title, info){
+            const popupimage = document.getElementById("popupimage");
+            function displayinfo(title, info, images){
                 popuptitle.innerText=title;
                 popuptext.innerHTML=info.replace(/\n/g, "<br>");
+                popupimage.innerHTML=images;
                 popup.style.display="block";
             }
             function makeMarker(data) {
@@ -67,11 +70,12 @@
                     position: new naver.maps.LatLng(data.y, data.x),
                     map: map
                 });
+                let images=data.images.map(x => `<image class="scinner" src="${x}">`).join("");
                 let content =
                     `<div class="infowindow"><div class="name">${data.name}</div>
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}')">MORE INFO</div>
-<div class="images">${data.images.map(x => `<image class="scinner" src="${x}">`).join("")}</div></div>`
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images}')">MORE INFO</div>
+<div class="images">${images}</div></div>`
                 var infowindow = new naver.maps.InfoWindow({
                     content: content
                 });
