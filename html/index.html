@@ -67,7 +67,7 @@
                 let content =
                     `<div class="infowindow"><div class="name">${data.name}</div>
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des}')">자세한 정보를 보려면 클릭</div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}')">자세한 정보를 보려면 클릭</div>
 <div class="images">${data.images.map(x => `<image class="scinner" src="${x}">`).join("")}</div></div>`
                 var infowindow = new naver.maps.InfoWindow({
                     content: content
