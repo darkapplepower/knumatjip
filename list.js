@@ -52,7 +52,7 @@ One line review: The  cheapest and most plentiful restaurant.`,
     {
         "addressko": "강원 춘천시 백령로138번길 35",
         "addressen":"35, Baengnyeong-ro 138beon-gi Chuncheon-si Gangwon-do",
-        "name": "Mansuk restaurant.",
+        "name": "Mansuk restaurant",
         "des": `Location: 35, Baengnyeong-ro 138beon-gi Chuncheon-si Gangwon-do
 Price: 메뉴판 사진 첨부, 
 Taste: The bulgogi has a smoky flavor
@@ -96,33 +96,5 @@ Service: Kimchi
 Recommend dishes:  rice noodles
 One line review: A perfect example of Vietnamese pho`,
         "placeid": "1459347495"
-    },
-    {
-        "addressko": "",
-        "addressen":"",
-        "name": "",
-        "des": "",
-        "placeid": ""
-    },
-    {
-        "addressko": "",
-        "addressen":"",
-        "name": "",
-        "des": "",
-        "placeid": ""
-    },
-    {
-        "addressko": "",
-        "addressen":"",
-        "name": "",
-        "des": "",
-        "placeid": ""
-    },
-    {
-        "addressko": "",
-        "addressen":"",
-        "name": "",
-        "des": "",
-        "placeid": ""
     }
 ]

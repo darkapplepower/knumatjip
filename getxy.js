@@ -2,7 +2,6 @@ const fs = require('fs');
 const axios = require("axios");
 try {
     const data = require("./list.js");
-    console.log(data)
     const f = [];
     for(let i of data){
         i.images = fs.readdirSync("./html/images/"+i.name).map(x=>"./images/"+i.name+"/"+x);
