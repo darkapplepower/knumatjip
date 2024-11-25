@@ -16,8 +16,9 @@
     <div id="bar"></div>
     <div id="map"></div>
     <div id="popup">
+        <div id="popuptitle"></div>
         <div id="popupinner"></div>
-        <div id="popupbutton"></div>
+        <div id="popupbutton">CLOSE</div>
     </div>
     <script>
         //(async function () {
@@ -55,7 +56,9 @@
             }
             const popup=document.getElementById("popup");
             const popuptext = document.getElementById("popupinner");
-            function displayinfo(info){
+            const popuptitle=document.getElementById("popuptitle");
+            function displayinfo(title, info){
+                popuptitle.innerText=title;
                 popuptext.innerText=info.replace(/\n/g, "<br>");
                 popup.style.display="block";
             }
@@ -67,7 +70,7 @@
                 let content =
                     `<div class="infowindow"><div class="name">${data.name}</div>
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}')">자세한 정보를 보려면 클릭</div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}')">MORE INFO</div>
 <div class="images">${data.images.map(x => `<image class="scinner" src="${x}">`).join("")}</div></div>`
                 var infowindow = new naver.maps.InfoWindow({
                     content: content
