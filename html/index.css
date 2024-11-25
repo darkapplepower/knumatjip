@@ -83,9 +83,16 @@ html{
     text-align:center;
 }
 #popupinner{
-    height:70vh;
+    height:60vh;
 }
 #popupbutton{
     height:5vh;
     width: 10vw
+}
+.moreinfo{
+    color: blue;
+}
+#popuptitle{
+    font-size: large;
+    height: 10vh;
 }
