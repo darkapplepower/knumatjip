@@ -27,6 +27,18 @@
     flex-direction: row;
     height:100%;
 }
+#bar{
+    display: flex;
+}
+#select{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.hyplink{
+    color:black;
+    font-size: large;
+}
 .scinner{
     float: left;
     margin-left: 0px;
