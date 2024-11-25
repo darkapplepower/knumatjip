@@ -71,3 +71,21 @@ body{
 html{
     height:100%;
 }
+#popup{
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    width:50vw;
+    height:80vh;
+    background-color:white;
+    left: 25vw;
+    top: 10vh;
+    text-align:center;
+}
+#popupinner{
+    height:70vh;
+}
+#popupbutton{
+    height:5vh;
+    width: 10vw
+}

@@ -15,7 +15,10 @@
 <body>
     <div id="bar"></div>
     <div id="map"></div>
-
+    <div id="popup">
+        <div id="popupinner"></div>
+        <div id="popupbutton"></div>
+    </div>
     <script>
         //(async function () {
             const infs = [];
@@ -47,8 +50,14 @@
             function gotomap(placeid){
                 window.open(`https://map.naver.com/p/entry/place/${placeid}`);
             }
-            function displayinfo(){
-                
+            document.getElementById("popupbutton").onclick = ()=>{
+                popup.style.display="none";
+            }
+            const popup=document.getElementById("popup");
+            const popuptext = document.getElementById("popupinner");
+            function displayinfo(info){
+                popuptext.innerText=info.replace(/\n/g, "<br>");
+                popup.style.display="block";
             }
             function makeMarker(data) {
                 var marker = new naver.maps.Marker({
