@@ -59,7 +59,7 @@
             const popuptitle=document.getElementById("popuptitle");
             function displayinfo(title, info){
                 popuptitle.innerText=title;
-                popuptext.innerText=info.replace(/\n/g, "<br>");
+                popuptext.innerHTML=info.replace(/\n/g, "<br>");
                 popup.style.display="block";
             }
             function makeMarker(data) {
