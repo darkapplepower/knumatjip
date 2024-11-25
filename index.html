@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>강원대 맛집 지도</title>
+    <script type="text/javascript"
+        src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
+    <link rel="stylesheet" href="index.css?a=212231222" />
+</head>
+
+<body>
+    <div id="bar"></div>
+    <div id="map"></div>
+
+    <script>
+        //(async function () {
+            const infs = [];
+            var mapOptions = {
+                center: new naver.maps.LatLng(37.86897, 127.7449),
+                zoom: 16,
+                minZoom: 15,
+                maxBounds: new naver.maps.LatLngBounds(
+                    new naver.maps.LatLng(37.8621, 127.7207),
+                    new naver.maps.LatLng(37.8782, 127.7629))
+            };
+            var map = new naver.maps.Map('map', mapOptions);
+            loadData().then(x=>{
+                for(let i of x){
+                    makeMarker(i);
+                }
+            });
+            async function loadData() {
+                let data = await fetch("./pin.json?a");
+                return await data.json();
+            }
+            naver.maps.Event.addListener(map, "click", function(e){
+                for(let i of infs){
+                    if(i.getMap){
+                        i.close();
+                    }
+                }
+            })
+            function gotomap(placeid){
+                window.open(`https://map.naver.com/p/entry/place/${placeid}`);
+            }
+            function displayinfo(){
+                
+            }
+            function makeMarker(data) {
+                var marker = new naver.maps.Marker({
+                    position: new naver.maps.LatLng(data.y, data.x),
+                    map: map
+                });
+                let content =
+                    `<div class="infowindow"><div class="name">${data.name}</div>
+<div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des}')">자세한 정보를 보려면 클릭</div>
+<div class="images">${data.images.map(x => `<image class="scinner" src=${x}>`).join("")}</div></div>`
+                var infowindow = new naver.maps.InfoWindow({
+                    content: content
+                });
+                var infowindowc = new naver.maps.InfoWindow({
+                    content: content
+                });
+                
+                naver.maps.Event.addListener(marker, 'mouseover', function (e) {
+                    infowindow.open(map, marker);
+                });
+                naver.maps.Event.addListener(marker, 'mouseout', function (e) {
+                    infowindow.close();
+                });
+                naver.maps.Event.addListener(marker, 'click', function (e) {
+                    if (infowindowc.getMap()) {
+                        infowindowc.close();
+                    }else{
+                        infowindowc.open(map, marker);
+                        
+                    }
+                });
+                infs.push(infowindow, infowindowc);
+
+            }
+        //})();
+
+    </script>
+</body>
+
+</html>
