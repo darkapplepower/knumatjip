@@ -5,6 +5,9 @@ try {
     const f = [];
     for(let i of data){
         i.images = fs.readdirSync("./html/images/"+i.name).map(x=>"./images/"+i.name+"/"+x);
+        if(i.x!==undefined){
+            continue;
+        }
         let location = axios
         .get("https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode", {
             params:{

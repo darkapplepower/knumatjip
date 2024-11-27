@@ -18,7 +18,9 @@ One line review: The price is a bit high, but the taste is definitely worth it.`
         "name": "Omeulhouse",
         "des": "설명을 입력해주세요\n설명을 입력해주세요",
         "placeid":"1001952255",
-        "category": "japanese"
+        "category": "japanese",
+        "x": "127.7451910",
+        "y": "37.8733833" 
     },
     {
         "addressko": "강원 춘천시 서부대성로 228 2층",
@@ -52,7 +54,9 @@ Service: The boss acts like a grandma.
 Recommend dishes: Kimchi Fried Rice
 One line review: The  cheapest and most plentiful restaurant.`,
         "placeid": "38275822",
-        "category": "korean"
+        "category": "korean",
+        "x": "127.7451510",
+        "y": "37.8733333" 
     },
     {
         "addressko": "강원 춘천시 백령로138번길 35",

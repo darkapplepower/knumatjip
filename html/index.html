@@ -10,18 +10,23 @@
     <script type="text/javascript"
         src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
     <link rel="stylesheet" href="index.css?a=2122312222" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div id="bar">
-        <a id="campusmap" class="hyplink" href="https://wwwk.kangwon.ac.kr/site/campusmap/chuncheon_eng.html" target="_blank">KNU Campus Map</a>
-        <a id="univsite" class="hyplink" href="https://wwwk.kangwon.ac.kr/english/index.do" target="_blank">KNU official site</a>
+        <div id="tnl">
+            <div id="title">KNU Restaunnt Map</div>
+            <a id="campusmap" class="hyplink" href="https://wwwk.kangwon.ac.kr/site/campusmap/chuncheon_eng.html"
+            target="_blank">KNU Campus Map<span class="material-icons">open_in_new</span></a>
+            <a id="univsite" class="hyplink" href="https://wwwk.kangwon.ac.kr/english/index.do" target="_blank">KNU official site<span class="material-icons">open_in_new</span></a>
+        </div>
         <div id="select">
-            <div class="checkbox">vietnam<input type="checkbox" id="vietnam" checked /></div>
-            <div class="checkbox">korean<input type="checkbox" id="korean" checked /></div>
-            <div class="checkbox">american<input type="checkbox" id="american" checked /></div>
-            <div class="checkbox">japanese<input type="checkbox" id="japanese" checked /></div>
-            <div class="checkbox">chinese<input type="checkbox" id="chinese" checked /></div>
+            <div class="checkbox">Vietnam<input type="checkbox" id="vietnam" checked /></div>
+            <div class="checkbox">Korean<input type="checkbox" id="korean" checked /></div>
+            <div class="checkbox">American<input type="checkbox" id="american" checked /></div>
+            <div class="checkbox">Japanese<input type="checkbox" id="japanese" checked /></div>
+            <div class="checkbox">Chinese<input type="checkbox" id="chinese" checked /></div>
         </div>
     </div>
     <div id="map"></div>
@@ -33,97 +38,101 @@
     </div>
     <script>
         //(async function () {
-            const infs = [];
-            const markerlist=[];
-            let checkbox=document.getElementsByClassName("checkbox");
-            for(let i of checkbox){
-                let text = i.innerText;
-                let rcheckbox = i.querySelector("input");
-                rcheckbox.addEventListener("change", ()=>{
-                    markerlist.forEach(x=>{
-                        if(text == x[0]){
-                            x[1].setVisible(rcheckbox.checked);
-                        }
-                    })
+        const infs = [];
+        const markerlist = [];
+        let checkbox = document.getElementsByClassName("checkbox");
+        for (let i of checkbox) {
+            let text = i.innerText.toLowerCase();
+            let rcheckbox = i.querySelector("input");
+            rcheckbox.addEventListener("change", () => {
+                markerlist.forEach(x => {
+                    if (text == x[0]) {
+                        x[1].setVisible(rcheckbox.checked);
+                    }
                 })
+            })
+        }
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.86897, 127.7449),
+            zoom: 16,
+            minZoom: 15,
+            maxBounds: new naver.maps.LatLngBounds(
+                new naver.maps.LatLng(37.8621, 127.7207),
+                new naver.maps.LatLng(37.8782, 127.7629))
+        };
+        var map = new naver.maps.Map('map', mapOptions);
+        loadData().then(x => {
+            for (let i of x) {
+                makeMarker(i);
             }
-            var mapOptions = {
-                center: new naver.maps.LatLng(37.86897, 127.7449),
-                zoom: 16,
-                minZoom: 15,
-                maxBounds: new naver.maps.LatLngBounds(
-                    new naver.maps.LatLng(37.8621, 127.7207),
-                    new naver.maps.LatLng(37.8782, 127.7629))
-            };
-            var map = new naver.maps.Map('map', mapOptions);
-            loadData().then(x=>{
-                for(let i of x){
-                    makeMarker(i);
+        });
+        async function loadData() {
+            let data = await fetch("./pin.json?a");
+            return await data.json();
+        }
+        naver.maps.Event.addListener(map, "click", function (e) {
+            for (let i of infs) {
+                if (i.getMap) {
+                    i.close();
+                }
+            }
+        })
+        function gotomap(placeid) {
+            window.open(`https://map.naver.com/p/entry/place/${placeid}`);
+        }
+        document.getElementById("popupbutton").onclick = () => {
+            popup.style.display = "none";
+        }
+        const popup = document.getElementById("popup");
+        const popuptext = document.getElementById("popupinner");
+        const popuptitle = document.getElementById("popuptitle");
+        const popupimage = document.getElementById("popupimage");
+        function displayinfo(title, info, images) {
+            popuptitle.innerText = title;
+            popuptext.innerHTML = info.replace(/\n/g, "<br>");
+            popupimage.innerHTML = images.replace(/★/g, "\"");
+            popup.style.display = "block";
+        }
+        function makeMarker(data) {
+            var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(data.y, data.x),
+                map: map
+            });
+            markerlist.push([data.category, marker]);
+            let images = data.images.map(x => `<image class="scinner" src="${x}">`).join("");
+            let content =
+                `<div class="infowindow"><div class="name">${data.name}</div>
+<div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "★")}')">MORE INFO<span class="material-icons" style="font-size: medium">help_outline</span></div>
+<div class="images">${images}</div></div>`;
+            var infowindowc = new naver.maps.InfoWindow({
+                content: content
+            });
+            marker.setOptions({ title: data.name })
+            marker.setIcon({
+                url: data.images[0],
+                size: new naver.maps.Size(50, 50),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(25, 26),
+                scaledSize: new naver.maps.Size(50, 50)
+            });
+            /*naver.maps.Event.addListener(marker, 'mouseover', function (e) {
+                infowindow.open(map, marker);
+            });
+            naver.maps.Event.addListener(marker, 'mouseout', function (e) {
+                infowindow.close();
+            });*/
+            naver.maps.Event.addListener(marker, 'click', function (e) {
+                if (infowindowc.getMap()) {
+                    infowindowc.close();
+                } else {
+                    infowindowc.open(map, marker);
+
                 }
             });
-            async function loadData() {
-                let data = await fetch("./pin.json?a");
-                return await data.json();
-            }
-            naver.maps.Event.addListener(map, "click", function(e){
-                for(let i of infs){
-                    if(i.getMap){
-                        i.close();
-                    }
-                }
-            })
-            function gotomap(placeid){
-                window.open(`https://map.naver.com/p/entry/place/${placeid}`);
-            }
-            document.getElementById("popupbutton").onclick = ()=>{
-                popup.style.display="none";
-            }
-            const popup=document.getElementById("popup");
-            const popuptext = document.getElementById("popupinner");
-            const popuptitle=document.getElementById("popuptitle");
-            const popupimage = document.getElementById("popupimage");
-            function displayinfo(title, info, images){
-                popuptitle.innerText=title;
-                popuptext.innerHTML=info.replace(/\n/g, "<br>");
-                popupimage.innerHTML=images.replace(/★/g, "\"");
-                popup.style.display="block";
-            }
-            function makeMarker(data) {
-                var marker = new naver.maps.Marker({
-                    position: new naver.maps.LatLng(data.y, data.x),
-                    map: map
-                });
-                markerlist.push([data.category, marker]);
-                let images=data.images.map(x => `<image class="scinner" src="${x}">`).join("");
-                let content =
-                    `<div class="infowindow"><div class="name">${data.name}</div>
-<div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "★")}')">MORE INFO</div>
-<div class="images">${images}</div></div>`
-                var infowindow = new naver.maps.InfoWindow({
-                    content: content
-                });
-                var infowindowc = new naver.maps.InfoWindow({
-                    content: content
-                });
-                
-                naver.maps.Event.addListener(marker, 'mouseover', function (e) {
-                    infowindow.open(map, marker);
-                });
-                naver.maps.Event.addListener(marker, 'mouseout', function (e) {
-                    infowindow.close();
-                });
-                naver.maps.Event.addListener(marker, 'click', function (e) {
-                    if (infowindowc.getMap()) {
-                        infowindowc.close();
-                    }else{
-                        infowindowc.open(map, marker);
-                        
-                    }
-                });
-                infs.push(infowindow, infowindowc);
+            infs.push(infowindowc);
 
-            }
+        }
         //})();
 
     </script>
