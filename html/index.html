@@ -18,26 +18,38 @@
         <div id="tnl">
             <div id="title">KNU Restaunnt Map</div>
             <a id="campusmap" class="hyplink" href="https://wwwk.kangwon.ac.kr/site/campusmap/chuncheon_eng.html"
-            target="_blank">KNU Campus Map<span class="material-icons">open_in_new</span></a>
-            <a id="univsite" class="hyplink" href="https://wwwk.kangwon.ac.kr/english/index.do" target="_blank">KNU official site<span class="material-icons">open_in_new</span></a>
+                target="_blank">KNU Campus Map<span class="material-icons ahyp">open_in_new</span></a>
+            <a id="univsite" class="hyplink" href="https://wwwk.kangwon.ac.kr/english/index.do" target="_blank">KNU
+                official site<span class="material-icons ahyp">open_in_new</span></a>
         </div>
-        <div id="select">
-            <div class="checkbox">Vietnam<input type="checkbox" id="vietnam" checked /></div>
-            <div class="checkbox">Korean<input type="checkbox" id="korean" checked /></div>
-            <div class="checkbox">American<input type="checkbox" id="american" checked /></div>
-            <div class="checkbox">Japanese<input type="checkbox" id="japanese" checked /></div>
-            <div class="checkbox">Chinese<input type="checkbox" id="chinese" checked /></div>
+        <div class="selector-container">
+            <button class="selector-button" onclick="toggleMenu()">filter<span class="material-icons">filter_alt</span></button>
+            <div id="selector-content">
+                <div id="select">
+                    <div class="checkbox">Vietnam<input type="checkbox" id="vietnam" checked /></div>
+                    <div class="checkbox">Korean<input type="checkbox" id="korean" checked /></div>
+                    <div class="checkbox">American<input type="checkbox" id="american" checked /></div>
+                    <div class="checkbox">Japanese<input type="checkbox" id="japanese" checked /></div>
+                    <div class="checkbox">Chinese<input type="checkbox" id="chinese" checked /></div>
+                </div><!--드롭다운 or 필터 버튼 누르면 뜨게-->
+            </div>
         </div>
+
     </div>
     <div id="map"></div>
     <div id="popup">
         <div id="popuptitle"></div>
         <div id="popupinner"></div>
         <div id="popupimage"></div>
-        <div id="popupbutton">CLOSE</div>
+        <div id="popupbutton">CLOSE</div><!--호버 속성 넣기, 커서 바꾸기-->
     </div>
     <script>
         //(async function () {
+        let asldkfjka=0;
+        function toggleMenu(){
+            asldkfjka=!asldkfjka;
+            document.getElementById("selector-content").style.display=["none", "block"][+asldkfjka];
+        }
         const infs = [];
         const markerlist = [];
         let checkbox = document.getElementsByClassName("checkbox");
@@ -90,7 +102,7 @@
         function displayinfo(title, info, images) {
             popuptitle.innerText = title;
             popuptext.innerHTML = info.replace(/\n/g, "<br>");
-            popupimage.innerHTML = images.replace(/★/g, "\"");
+            popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"")}</div>`;
             popup.style.display = "block";
         }
         function makeMarker(data) {
@@ -105,6 +117,7 @@
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
 <div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "★")}')">MORE INFO<span class="material-icons" style="font-size: medium">help_outline</span></div>
 <div class="images">${images}</div></div>`;
+            //이미지 너비에 박스 맞추기
             var infowindowc = new naver.maps.InfoWindow({
                 content: content
             });
