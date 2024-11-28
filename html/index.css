@@ -93,7 +93,7 @@ html, body {
     margin: 0;  
     padding: 0;
 }
-@media(max-width: 600px){
+@media(max-width: 700px){
     .infowindow{ 
         max-width: 60vw;
         max-height: 60vw;
@@ -114,24 +114,24 @@ html, body {
         grid-template-columns: repeat(1, 1fr);
         
     }
-    #bar{
-        display: var(--bar-display);
-    }
 }
 @media(max-height: 500px){
     #bar {
         height:50px; 
     }
     #title {
-        font-size: x-large;
+        font-size: large;
         font-weight: bold;
     }
     #tnl{
-        font-size: x-large;
+        font-size: large;
     }
-    .infowindow{ 
+    .infowindow{
         max-width: 60vh;
         max-height: calc(60vh - 50px);
+    }
+    #bar{
+        display: var(--bar-display);
     }
 }
 body{
