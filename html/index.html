@@ -94,6 +94,7 @@
         }
         document.getElementById("popupbutton").onclick = () => {
             popup.style.display = "none";
+            document.documentElement.style.setProperty("--bar-display", "grid");
         }
         const popup = document.getElementById("popup");
         const popuptext = document.getElementById("popupinner");
@@ -104,6 +105,7 @@
             popuptext.innerHTML = info.replace(/\n/g, "<br>");
             popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"")}</div>`;
             popup.style.display = "block";
+            document.documentElement.style.setProperty("--bar-display", "none");
         }
         function makeMarker(data) {
             var marker = new naver.maps.Marker({
