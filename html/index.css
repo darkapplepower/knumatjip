@@ -93,11 +93,19 @@ html, body {
     margin: 0;  
     padding: 0;
 }
-@media(max-width: 500px){
+@media(max-width: 600px){
     .infowindow{ 
         max-width: 60vw;
         max-height: 60vw;
     }
+    #title {
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #tnl{
+        font-size: xx-large;
+    }
+
 }
 @media(max-height: 500px){
     #bar {
