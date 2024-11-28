@@ -112,6 +112,17 @@ html, body {
         height:50px; 
     }
     .infowindow{ 
+        max-width: 60vw;
+        max-height: 60vw;
+    }
+    #title {
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #tnl{
+        font-size: x-large;
+    }
+    .infowindow{ 
         max-width: 60vh;
         max-height: calc(60vh - 50px);
     }
