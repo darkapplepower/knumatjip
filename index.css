@@ -105,15 +105,22 @@ html, body {
     #tnl{
         font-size: x-large;
     }
-
+    #select{
+        justify-items: end;     
+        align-items: start;
+        column-gap: 10px;
+        row-gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    #bar{
+        display: var(--bar-display);
+    }
 }
 @media(max-height: 500px){
     #bar {
         height:50px; 
-    }
-    .infowindow{ 
-        max-width: 60vw;
-        max-height: 60vw;
     }
     #title {
         font-size: x-large;
@@ -206,4 +213,7 @@ html{
     padding-right: 10px;
     align-items: center;
     display: flex;
+}
+:root{
+    --bar-display: grid;
 }
