@@ -178,6 +178,7 @@ body {
     background-repeat: no-repeat; 
     }
 #firstpopup {
+    overflow: auto;
     z-index: 1000;
     position: absolute;
     left: 10vw;
@@ -198,7 +199,9 @@ body {
 #fpinner {
     font-size: 16px;
 }
-
+#fpinner img {
+    width: 80vw;
+}
 @media(max-width: 700px) {
     .infowindow {
         max-width: 60vw;
