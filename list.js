@@ -16,7 +16,12 @@ One line review: The price is a bit high, but the taste is definitely worth it.`
         "addressko": "강원 춘천시 서부대성로227번길 24 2층",
         "addressen": "631 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Omeulhouse",
-        "des": "설명을 입력해주세요\n설명을 입력해주세요",
+        "des": `Price: The price is innovation
+Taste: It's moderately delicious, especially the croquettes.
+Service: Water is self 
+Recommend dishes: croquettes.
+One line review: This is a restaurant worth visiting.
+`,
         "placeid": "1001952255",
         "category": "japanese",
         "x": "127.7451910",
@@ -110,6 +115,47 @@ One line review: A perfect example of Vietnamese pho`,
         "placeid": "1459347495",
         "category": "vietnam"
     },
+    {
+        "addressko": "강원 춘천시 공지로242번길 25 1층 오시드래요",
+        "addressen": "1st floor 25 Gonjiro 242beon-gil Chuncheon-si Gangwon-do",
+        "name": "Osideulaeyo",
+        "des": `Location: 1st floor 25 Gonjiro 242beon-gil Chuncheon-si Gangwon-do
+Price: It’s cheap
+Taste: It features a tender pork in clear soup
+Service: Unlimited refills of rice and broth, Waiting is required
+Recommend dishes: clear pork soup
+Moon’s One line review: This is a famous soup restaurant in Chuncheon, so you should try it at least once.  “Feels great!”
+`,
+        "placeid": "1603813456",
+        "category": "korean"
+    },
+    {
+        "addressko": "강원 춘천시 백령로138번길 41 2층박가부대",
+        "addressen": "2nd floor ParkGadae 41 Baengnyeon-ro 138beon-gil Chuncheon-si Gangwon-do",
+        "name": "Parkga Spicy Sausage Stew",
+        "des": `Location: 2nd floor ParkGadae 41 Baengnyeon-ro 138beon-gil Chuncheon-si Gangwon-do
+Price: It’s ve responsible
+Service: If yoorder the original set, you get unlimited refills of ramen, rice, and broth.
+Recommend dish: original set Budaejjigae
+One line review: If you’re an American, you should try it at least once
+`,
+        "placeid": "30976041",
+        "category": "korean"
+    },
+    {
+        "addressko": "강원 춘천시 서부대성로 255 , 2층",
+        "addressen": "Location: 633-11 Hyoja-dong Chuncheon-si Gangwon-do",
+        "name": "Bricks Pizza",
+        "des": `Location: 633-11 Hyoja-dong Chuncheon-si Gangwon-do
+Price: The price is expensive, but size is big
+Taste: little bit salty, Spicy and smoky slices add a bold kick
+Service: self order service
+Recommend dishes:  Pepperoni,bulgogi
+One line review:Good mood  good food
+`,
+        "placeid": "552019785",
+        "category": "american"
+    }
     /*{
         "addressko": "",
         "addressen": "",
