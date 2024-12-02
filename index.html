@@ -143,7 +143,7 @@
             let data = await fetch("./pin.json?a");
             return await data.json();
         }
-        naver.maps.Event.addListener(map, "click", function (e) {
+        naver.maps.Event.addListener(map, "click dragend tap", function (e) {
             for (let i of infs) {
                 if (i.getMap) {
                     document.documentElement.style.setProperty("--bar-display", "grid");
@@ -208,7 +208,10 @@
                 }
             });
             infs.push(infowindowc);
-            document.querySelector(`[title="${data.name}"`).classList="pins";
+            document.querySelector(`[title="${data.name}"`).classList.add('pins');
+            if(data.mspick){
+                document.querySelector(`[title="${data.name}"`).classList.add('mspick');
+            }
         }
         //})();
 
