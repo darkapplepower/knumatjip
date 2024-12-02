@@ -144,7 +144,24 @@ body {
 }
 .pins {
     border-radius: 50%;
+    overflow: visible !important;
 }
+.pins img {
+    border-radius: 50%;
+}
+.mspick::after {
+    filter: sepia(100%) hue-rotate(20deg) saturate(400%);
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 20px; 
+    width: 40px; 
+    height: 40px; 
+    background-image: url('./images/mspick.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    }
 #firstpopup {
     z-index: 1000;
     position: absolute;

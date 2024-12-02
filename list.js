@@ -40,7 +40,7 @@ One line review: This is a restaurant worth visiting.
         "addressen": "627-9 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Jukhyang",
         "des": `Location: Hyoje-gil Chuncheon-si Gangwon-do
-Price: All main menus are cheap and plentiful. (메뉴판 첨부)
+Price: All main menus are cheap and plentiful.
 Taste: It taste like old Jjajangmyeon.
 Service: Water and Side dishes are self-service. Payment is made at once.
 Recommend dishes:Jjajangmyeon
@@ -68,26 +68,26 @@ One line review: The  cheapest and most plentiful restaurant.`,
         "addressen": "35, Baengnyeong-ro 138beon-gi Chuncheon-si Gangwon-do",
         "name": "Mansuk restaurant",
         "des": `Location: 35, Baengnyeong-ro 138beon-gi Chuncheon-si Gangwon-do
-Price: 메뉴판 사진 첨부, 
 Taste: The bulgogi has a smoky flavor
 Service: Naengmyeon, soybean paste soup, and wrapped vegetables are served.
 Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bolgogi set meal
 One line review: You can taste a varety of foods by ordering just one dish.`,
         "placeid": "37127882",
-        "category": "korean"
+        "category": "korean",
+        "mspick": true
     },
     {
         "addressko": "강원 춘천시 서부대성로 222 1층",
         "addressen": "1stfloor 222 Seobudaeseong-ro Chuncheon-si Gangwon-do",
         "name": "MacLaren Burger",
         "des": `Location: 1stfloor 222 Seobudaeseong-ro Chuncheon-si Gangwon-do
-Price: 메뉴판사진첨부, 수제버거기 때문에 비싸다.
 Taste: It’s like a healthy Amercan burger.
 Service: Maclaren Burger is a self-service restaurant.
 Recommend dishes: fresh burger, nashville hot chicken burger
 One line review:  You can feel nostalgic by eating food from another country.`,
         "placeid": "1944716264",
-        "category": "american"
+        "category": "american",
+        "mspick": true
     },
     {
         "addressko": "강원 춘천시 애막골길7번길 26 1층",
@@ -100,7 +100,8 @@ Service: Grilled eggs are served as a side dish.
 Recommend dishes:  순한 맛(mild taste), Order rice and eat it with chicken noodles
 One line review: This restaurant offers a filling meal at a reasonable price.`,
         "placeid": "1575958333",
-        "category": "korean"
+        "category": "korean",
+        "mspick": true
     },
     {
         "addressko": "강원 춘천시 백령로 19",
@@ -127,7 +128,8 @@ Recommend dishes: clear pork soup
 Moon’s One line review: This is a famous soup restaurant in Chuncheon, so you should try it at least once.  “Feels great!”
 `,
         "placeid": "1603813456",
-        "category": "korean"
+        "category": "korean",
+        "mspick": true
     },
     {
         "addressko": "강원 춘천시 백령로138번길 41 2층박가부대",
