@@ -64,6 +64,7 @@
       </button>
     <script>
         //(async function () {
+        let fpindex=0;
         (async function () {
             const cookies = document.cookie.split(';'); // 쿠키 문자열을 배열로 분리
             for (let i = 0; i < cookies.length; i++) {
@@ -92,7 +93,6 @@
                 fppopuptext.innerHTML = fpdata[fpindex];
             }
         }
-        let fpindex=0;
         let fppopup = document.getElementById("firstpopup");
                 let fppopuptext = document.getElementById("fpinner");
         let fpdata;
