@@ -142,7 +142,9 @@ body {
 
     color: white;
 }
-
+.pins {
+    border-radius: 50%;
+}
 #firstpopup {
     z-index: 1000;
     position: absolute;
@@ -253,13 +255,12 @@ html {
 }
 
 #popupinner {
-    height: 40vh;
     line-height: 1.8;
     text-align: left;
 }
 
 #popupimage {
-    height: 20vh;
+    height: 40vh;
 }
 
 #selector-content {
