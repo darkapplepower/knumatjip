@@ -143,11 +143,12 @@ body {
     color: white;
 }
 .pins {
-    border-radius: 50%;
+    border: 1px solid black;
+    border-radius: 40%;
     overflow: visible !important;
 }
 .pins img {
-    border-radius: 50%;
+    border-radius: 40%;
 }
 .help-button {
     position: fixed;
@@ -178,7 +179,6 @@ body {
     background-repeat: no-repeat; 
     }
 #firstpopup {
-    overflow: auto;
     z-index: 1000;
     position: absolute;
     left: 10vw;
@@ -197,10 +197,14 @@ body {
 }
 
 #fpinner {
+    
+    overflow: auto;
     font-size: 16px;
 }
 #fpinner img {
-    width: 80vw;
+    display: block;
+    width: 600px;
+    max-width: 80vw;
 }
 @media(max-width: 700px) {
     .infowindow {
