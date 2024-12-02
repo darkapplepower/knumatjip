@@ -9,7 +9,7 @@
     <title>강원대 맛집 지도</title>
     <script type="text/javascript"
         src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
-    <link rel="stylesheet" href="index.css?a=2122312222" />
+    <link rel="stylesheet" href="index.css?a=202412010144" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -23,7 +23,8 @@
                 official site<span class="material-icons ahyp">open_in_new</span></a>
         </div>
         <div class="selector-container">
-            <button class="selector-button" onclick="toggleMenu()">filter<span class="material-icons">filter_alt</span></button>
+            <button class="selector-button" onclick="toggleMenu()">filter<span
+                    class="material-icons">filter_alt</span></button>
             <div id="selector-content">
                 <div id="select">
                     <div class="checkbox">Vietnam<input type="checkbox" id="vietnam" checked /></div>
@@ -36,6 +37,20 @@
         </div>
 
     </div>
+    <div id="firstpopup">
+        <div id="fptitle">
+            <div id="fptitleinner">HELP</div>
+            <div id="fpclose" onclick="fpclose()">X</div>
+        </div>
+        <div id="fpinner">
+
+        </div>
+        <div id="fpbuttons">
+            <button id="fpprev" onclick="fpprev()">prev</button>
+            <button id="fpnext" onclick="fpnext()">next</button>
+        </div>
+
+    </div>
     <div id="map"></div>
     <div id="popup">
         <div id="popuptitle"></div>
@@ -45,10 +60,56 @@
     </div>
     <script>
         //(async function () {
-        let asldkfjka=0;
-        function toggleMenu(){
-            asldkfjka=!asldkfjka;
-            document.getElementById("selector-content").style.display=["none", "block"][+asldkfjka];
+        (async function () {
+            const cookies = document.cookie.split(';'); // 쿠키 문자열을 배열로 분리
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim(); // 공백 제거
+                // 쿠키의 이름과 값을 '='으로 분리
+                if (cookie.startsWith("help" + '=')) {
+                    return;
+
+                }
+            }
+            showHelp();
+            document.cookie = "help=true";
+        })();
+        function fpclose(){
+            fppopup.style.display="none";
+        }
+        function fpprev() {
+            if(fpindex>0){
+                fpindex--;
+                fppopuptext.innerHTML = fpdata[fpindex];
+            }
+        }
+        function fpnext() {
+            if(fpindex<fpdata.length-1){
+                fpindex++;
+                fppopuptext.innerHTML = fpdata[fpindex];
+            }
+        }
+        let fpindex=0;
+        let fppopup = document.getElementById("firstpopup");
+                let fppopuptext = document.getElementById("fpinner");
+        let fpdata;
+        function showHelp() {
+            fetch("./popupinner.json?a")
+            .then(data=>{
+                data.json()
+                .then(data=>{
+                    
+                fppopuptext.innerHTML = data[0];
+                fpdata=data;
+                fppopup.style.display = "grid";
+                })
+                
+            });
+            
+        }
+        let asldkfjka = 0;
+        function toggleMenu() {
+            asldkfjka = !asldkfjka;
+            document.getElementById("selector-content").style.display = ["none", "block"][+asldkfjka];
         }
         const infs = [];
         const markerlist = [];
@@ -85,6 +146,7 @@
         naver.maps.Event.addListener(map, "click", function (e) {
             for (let i of infs) {
                 if (i.getMap) {
+                    document.documentElement.style.setProperty("--bar-display", "grid");
                     i.close();
                 }
             }
@@ -105,7 +167,6 @@
             popuptext.innerHTML = info.replace(/\n/g, "<br>");
             popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"")}</div>`;
             popup.style.display = "block";
-            document.documentElement.style.setProperty("--bar-display", "none");
         }
         function makeMarker(data) {
             var marker = new naver.maps.Marker({
@@ -142,11 +203,12 @@
                     infowindowc.close();
                 } else {
                     infowindowc.open(map, marker);
+                    document.documentElement.style.setProperty("--bar-display", "none");
 
                 }
             });
             infs.push(infowindowc);
-
+            document.querySelector(`[title="${data.name}"`).classList="pins";
         }
         //})();
 
