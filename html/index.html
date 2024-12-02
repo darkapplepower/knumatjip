@@ -148,7 +148,7 @@
             let data = await fetch("./pin.json?a");
             return await data.json();
         }
-        naver.maps.Event.addListener(map, "click dragend tap", function (e) {
+        naver.maps.Event.addListener(map, "click dragend tap touchend pinchend mouseup", function (e) {
             for (let i of infs) {
                 if (i.getMap) {
                     document.documentElement.style.setProperty("--bar-display", "grid");
