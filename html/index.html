@@ -97,6 +97,7 @@
                 let fppopuptext = document.getElementById("fpinner");
         let fpdata;
         function showHelp() {
+            fpindex=0;
             fetch("./popupinner.json?a")
             .then(data=>{
                 data.json()
