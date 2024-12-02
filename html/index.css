@@ -149,6 +149,21 @@ body {
 .pins img {
     border-radius: 50%;
 }
+.help-button {
+    position: fixed;
+    bottom: 20px; /* 화면 아래에서 20px 위치 */
+    left: 20px; /* 화면 왼쪽에서 20px 위치 */
+    background-color: #4285F4; /* 구글 블루 색상 */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%; /* 원형 버튼 */
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 */
+    cursor: pointer;
+    z-index: 1000; /* 다른 요소들 위에 표시 */
+    transition: background-color 0.3s;
+  }
 .mspick::after {
     filter: sepia(100%) hue-rotate(20deg) saturate(400%);
     border-radius: 50%;
