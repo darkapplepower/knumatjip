@@ -166,6 +166,7 @@ body {
     transition: background-color 0.3s;
   }
 .mspick::after {
+    pointer-events: none;
     filter: sepia(100%) hue-rotate(20deg) saturate(400%);
     border-radius: 50%;
     content: "";
