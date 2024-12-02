@@ -208,8 +208,8 @@ body {
 }
 @media(max-width: 700px) {
     .infowindow {
-        max-width: 60vw;
-        max-height: 60vw;
+        max-width: 80vw;
+        max-height: 60vh;
     }
 
     #fptitle {
