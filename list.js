@@ -28,14 +28,6 @@ One line review: This is a restaurant worth visiting.
         "y": "37.8733833"
     },
     {
-        "addressko": "강원 춘천시 서부대성로 228 2층",
-        "addressen": "627-9 Hyoja-dong Chuncheon-si Gangwon-do",
-        "name": "Noran",
-        "des": "설명을 입력해주세요\n설명을 입력해주세요",
-        "placeid": "37643007",
-        "category": "japanese"
-    },
-    {
         "addressko": "강원 춘천시 효자2동 183-6",
         "addressen": "627-9 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Jukhyang",
