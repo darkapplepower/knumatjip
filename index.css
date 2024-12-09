@@ -182,7 +182,7 @@ body {
 #firstpopup {
     z-index: 1000;
     position: absolute;
-    left: 10vw;
+    left: calc(10vw - 5px);
     top: 10vh;
     display: none;
     width: 80vw;
@@ -191,6 +191,7 @@ body {
     border-radius: 10px;
     border: 1px solid black;
     grid-template-rows: 1fr 9fr 1fr;
+    padding: 5px;
 }
 
 #fptitle {
@@ -333,7 +334,7 @@ html {
     background-color: lightgray;
     border: 1px solid black;
     height: 5vh;
-    width: 10vw;
+    width: 100px;
     display: inline-block;
 }
 
