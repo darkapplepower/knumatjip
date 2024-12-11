@@ -9,7 +9,7 @@
     <title>강원대 맛집 지도</title>
     <script type="text/javascript"
         src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
-    <link rel="stylesheet" href="index.css?a=202412021351" />
+    <link rel="stylesheet" href="index.css?a=202412051351" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta property="og:image" content="./images/title.jpg">
 </head>
@@ -98,7 +98,7 @@
         let fpdata;
         function showHelp() {
             fpindex=0;
-            fetch("./popupinner.json?a")
+            fetch("./popupinner.json?ab")
             .then(data=>{
                 data.json()
                 .then(data=>{
@@ -145,7 +145,7 @@
             }
         });
         async function loadData() {
-            let data = await fetch("./pin.json?a");
+            let data = await fetch("./pin.json?ab");
             return await data.json();
         }
         naver.maps.Event.addListener(map, "click dragend tap touchend pinchend mouseup", function (e) {
