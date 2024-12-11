@@ -169,7 +169,7 @@
         const popupimage = document.getElementById("popupimage");
         function displayinfo(title, info, images) {
             popuptitle.innerText = title;
-            popuptext.innerHTML = info.replace(/(?:^)([^\:]+)\:/g, "<b>$1</b>").replace(/\n/g, "<br><br>");
+            popuptext.innerHTML = info.replace(/(?:^)([^\:]+)\:/g, "<b>$1</b>").replace(/\n/gm, "<br><br>");
             popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"")}</div>`;
             popup.style.display = "block";
         }
