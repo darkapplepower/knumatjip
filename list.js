@@ -149,6 +149,33 @@ One line review:Good mood  good food
 `,
         "placeid": "552019785",
         "category": "american"
+    },
+    {
+        "addressko": "강원 춘천시 우석로 4",
+        "addressen": "4 Wooseok-ro Chuncheon-si Gangwon-do",
+        "name": "Sunuri Gamjatang",
+        "des": `Location: 4 Wooseok-ro Chuncheon-si Gangwon-do
+Price: It's responsible.
+Taste: Not only the main dish but also the side dishes are delicious.
+Service: Free candy and coffee after meal.
+Recommendation dishes: Beef bone Haejangguk.
+One line review: Great for a meal!`,
+        "placeid": "15109913",
+        "category": "korean"
+    },
+    {
+        "addressko": "강원 춘천시 우석로67번길 12 1층",
+        "addressen": "1st floor 12 Wooseok-ro 67beon-gil Chuncheon-si Gangwon-do",
+        "name": "People's club",
+        "des": `Location: 1st floor 12 Wooseok-ro 67beon-gil Chuncheon-si Gangwon-do
+Price: It's very expensive.
+Taste: Japanese style pork cutlet is very soft.
+Service: Sometimes the owner prepares different food as a service.
+Recommendation dishes: hirektsu, los katsu
+One line review: Recommend if you want to go to a pork cutlet restaurant with a nice
+atmosphere.`,
+        "placeid": "1909851296",
+        "category": "japanese"
     }
     /*{
         "addressko": "",
