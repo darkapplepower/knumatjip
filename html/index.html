@@ -171,7 +171,7 @@
         const popupimage = document.getElementById("popupimage");
         function displayinfo(title, info, images) {
             popuptitle.innerText = title;
-            popuptext.innerHTML = info.replace(/(?:^)([^\:]+\:)/gm, "<b>$1</b>").replace(/\n/g, "<br><br>");
+            popuptext.innerHTML = info.replace(/(?:^)([^\:]+\:)/gm, "<b>$1</b>").replace(/\n/g, "<br><br>").replace(/★/g, "\"").replace(/☆/g, "\'");
             popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"").replace(/☆/g, "\'")}</div>`;
             popup.style.display = "grid";
         }
@@ -185,7 +185,7 @@
             let content =
                 `<div class="infowindow"><div class="name">${data.name}</div>
 <div class="address" onclick="gotomap('${data.placeid}')">${data.addressen}</div>
-<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n")}','${images.replace(/\"/g, "★").replace(/\'/g,"☆")}')">MORE INFO<span class="material-icons" style="font-size: medium">help_outline</span></div>
+<div class="moreinfo" onclick="displayinfo('${data.name}', '${data.des.replace(/\n/g, "\\n").replace(/\'/g,"☆").replace(/\"/g, "★")}','${images.replace(/\"/g, "★")}')">MORE INFO<span class="material-icons" style="font-size: medium">help_outline</span></div>
 <div class="images">${images}</div></div>`;
             //이미지 너비에 박스 맞추기
             var infowindowc = new naver.maps.InfoWindow({
