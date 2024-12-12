@@ -4,7 +4,7 @@ module.exports = [
         "addressen": "250-51 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Onchan",
         "des": `Location: 250-51 Hyoja-dong Chuncheon-si Gangwon-do
-Price: The price is a bit hig
+Price: The price is a bit high
 Taste: You can experience the authentic taste of Japanese mazesoba.
 Service: Self-service 
 Recommend dishes:  마제소바(mazesoba)
