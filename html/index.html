@@ -9,7 +9,7 @@
     <title>KNU Food Map</title>
     <script type="text/javascript"
         src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
-    <link rel="stylesheet" href="index.css?a=202412051351" />
+    <link rel="stylesheet" href="index.css?a=202412071351" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta property="og:image" content="./images/title.jpg">
 </head>
@@ -100,7 +100,7 @@
         let fpdata;
         function showHelp() {
             fpindex=0;
-            fetch("./popupinner.json?ab")
+            fetch("./popupinner.json?acb")
             .then(data=>{
                 data.json()
                 .then(data=>{
@@ -147,7 +147,7 @@
             }
         });
         async function loadData() {
-            let data = await fetch("./pin.json?ab");
+            let data = await fetch("./pin.json?acb");
             return await data.json();
         }
         naver.maps.Event.addListener(map, "click dragend tap touchend pinchend mouseup", function (e) {
