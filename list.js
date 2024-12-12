@@ -20,8 +20,7 @@ One line review: The price is a bit high, but the taste is definitely worth it.`
 Taste: It's moderately delicious, especially the croquettes.
 Service: Water is self 
 Recommend dishes: croquettes.
-One line review: This is a restaurant worth visiting.
-`,
+One line review: This is a restaurant worth visiting.`,
         "placeid": "1001952255",
         "category": "japanese",
         "x": "127.7451910",
@@ -45,7 +44,7 @@ One line review: Spicy Jjajangmyeon is not recommended for Americans because it 
         "addressen": "631 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Sinchon Pork Cutlet",
         "des": `Location: 631 Hyoja-dong Chuncheon-si Gangwon-do
-Price: All menus are 5000won. It’s very cheap.(메뉴판 사진 첨부)
+Price: All menus are 5000won. It’s very cheap.
 Taste:  The taste of food made by grandma.
 Service: The boss acts like a grandma.
 Recommend dishes: Kimchi Fried Rice
@@ -62,8 +61,8 @@ One line review: The  cheapest and most plentiful restaurant.`,
         "des": `Location: 35, Baengnyeong-ro 138beon-gi Chuncheon-si Gangwon-do
 Taste: The bulgogi has a smoky flavor
 Service: Naengmyeon, soybean paste soup, and wrapped vegetables are served.
-Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bolgogi set meal
-One line review: You can taste a varety of foods by ordering just one dish.
+Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bulgogi set meal
+One line review: You can taste a variety of foods by ordering just one dish.
 Moon’s One line review: You can taste a variety of foods by ordering just one dish. “Naengmyeon is kick”`,
         "placeid": "37127882",
         "category": "korean",
@@ -74,9 +73,9 @@ Moon’s One line review: You can taste a variety of foods by ordering just one 
         "addressen": "1stfloor 222 Seobudaeseong-ro Chuncheon-si Gangwon-do",
         "name": "MacLaren Burger",
         "des": `Location: 1stfloor 222 Seobudaeseong-ro Chuncheon-si Gangwon-do
-Taste: It’s like a healthy Amercan burger.
+Taste: It’s like a healthy American burger.
 Service: Maclaren Burger is a self-service restaurant.
-Recommend dishes: fresh burger, nashville hot chicken burger
+Recommend dishes: fresh burger, Nashville hot chicken burger
 One line review:  You can feel nostalgic by eating food from another country.
 Moon’s One line review: You can feel nostalgic by eating food from another country. “The patty is well cooked”`,
         "placeid": "1944716264",
@@ -131,7 +130,7 @@ Moon’s One line review: This is a famous soup restaurant in Chuncheon, so you 
         "name": "Parkga Spicy Sausage Stew",
         "des": `Location: 2nd floor ParkGadae 41 Baengnyeon-ro 138beon-gil Chuncheon-si Gangwon-do
 Price: It’s ve responsible
-Service: If yoorder the original set, you get unlimited refills of ramen, rice, and broth.
+Service: If you order the original set, you get unlimited refills of ramen, rice, and broth.
 Recommend dish: original set Budaejjigae
 One line review: If you’re an American, you should try it at least once
 `,
