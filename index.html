@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>강원대 맛집 지도</title>
+    <title>KNU Food Map</title>
     <script type="text/javascript"
         src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jjpxnzq8cx&language=en"></script>
     <link rel="stylesheet" href="index.css?a=202412051351" />
@@ -17,7 +17,7 @@
 <body>
     <div id="bar">
         <div id="tnl">
-            <div id="title">KNU Restaurant Map</div>
+            <div id="title">KNU Food Map</div>
             <a id="campusmap" class="hyplink" href="https://wwwk.kangwon.ac.kr/site/campusmap/chuncheon_eng.html"
                 target="_blank">KNU Campus Map<span class="material-icons ahyp">open_in_new</span></a>
             <a id="univsite" class="hyplink" href="https://wwwk.kangwon.ac.kr/english/index.do" target="_blank">KNU
@@ -55,8 +55,10 @@
     <div id="map"></div>
     <div id="popup">
         <div id="popuptitle"></div>
-        <div id="popupinner"></div>
-        <div id="popupimage"></div>
+        <div id="popupcontent">
+            <div id="popupinner"></div>
+            <div id="popupimage"></div>
+        </div>
         <div id="popupbutton">CLOSE</div><!--호버 속성 넣기, 커서 바꾸기-->
     </div>
     <button class="help-button" onclick="showHelp()">
@@ -171,7 +173,7 @@
             popuptitle.innerText = title;
             popuptext.innerHTML = info.replace(/(?:^)([^\:]+\:)/gm, "<b>$1</b>").replace(/\n/g, "<br><br>");
             popupimage.innerHTML = `<div class="images">${images.replace(/★/g, "\"")}</div>`;
-            popup.style.display = "block";
+            popup.style.display = "grid";
         }
         function makeMarker(data) {
             var marker = new naver.maps.Marker({
