@@ -63,7 +63,9 @@ One line review: The  cheapest and most plentiful restaurant.`,
 Taste: The bulgogi has a smoky flavor
 Service: Naengmyeon, soybean paste soup, and wrapped vegetables are served.
 Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bolgogi set meal
-One line review: You can taste a varety of foods by ordering just one dish.`,
+One line review: You can taste a varety of foods by ordering just one dish.
+Moon’s One line review: You can taste a variety of foods by ordering just one
+dish. “Naengmyeon is kick”`,
         "placeid": "37127882",
         "category": "korean",
         "mspick": true
@@ -76,7 +78,10 @@ One line review: You can taste a varety of foods by ordering just one dish.`,
 Taste: It’s like a healthy Amercan burger.
 Service: Maclaren Burger is a self-service restaurant.
 Recommend dishes: fresh burger, nashville hot chicken burger
-One line review:  You can feel nostalgic by eating food from another country.`,
+One line review:  You can feel nostalgic by eating food from another country.
+Moon’s One line review: You can feel nostalgic by eating food from another
+country.
+“The patty is well cooked”`,
         "placeid": "1944716264",
         "category": "american",
         "mspick": true
@@ -90,7 +95,9 @@ Price: The price is normal, but if you make a bank transfer or pay in cash , you
 Taste: The noodles are chewy, and the broth has a rich, deep flavor.
 Service: Grilled eggs are served as a side dish.
 Recommend dishes:  순한 맛(mild taste), Order rice and eat it with chicken noodles
-One line review: This restaurant offers a filling meal at a reasonable price.`,
+One line review: This restaurant offers a filling meal at a reasonable price.
+Moon’s One line review: This restaurant offers a filling meal at a reasonable
+price. “Wait, it’s me, Chicken!”`,
         "placeid": "1575958333",
         "category": "korean",
         "mspick": true
@@ -117,8 +124,7 @@ Price: It’s cheap
 Taste: It features a tender pork in clear soup
 Service: Unlimited refills of rice and broth, Waiting is required
 Recommend dishes: clear pork soup
-Moon’s One line review: This is a famous soup restaurant in Chuncheon, so you should try it at least once.  “Feels great!”
-`,
+Moon’s One line review: This is a famous soup restaurant in Chuncheon, so you should try it at least once.  “Feels great!”`,
         "placeid": "1603813456",
         "category": "korean",
         "mspick": true
