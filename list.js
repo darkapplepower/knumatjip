@@ -102,7 +102,7 @@ Moon's One line review: This restaurant offers a filling meal at a reasonable pr
         "addressen": "176-12 Hyoja-dong Chuncheon-si Gangwon-do",
         "name": "Hanoi pho Vietnam Rice Noddles",
         "des": `Location: 176-12 Hyoja-dong Chuncheon-si Gangwon-do
-Price: The price is a bit hig
+Price: The price is a bit high
 Taste: It contains rice noodles, which are easy on the stomach, and the broth is rich, making it enjoyable to eat.
 Service: Kimchi
 Recommend dishes:  rice noodles
