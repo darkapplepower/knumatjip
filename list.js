@@ -64,8 +64,7 @@ Taste: The bulgogi has a smoky flavor
 Service: Naengmyeon, soybean paste soup, and wrapped vegetables are served.
 Recommend dishes:  Direct fire bulgogi set meal, Jeyuk bolgogi set meal
 One line review: You can taste a varety of foods by ordering just one dish.
-Moon’s One line review: You can taste a variety of foods by ordering just one
-dish. “Naengmyeon is kick”`,
+Moon’s One line review: You can taste a variety of foods by ordering just one dish. “Naengmyeon is kick”`,
         "placeid": "37127882",
         "category": "korean",
         "mspick": true
@@ -79,9 +78,7 @@ Taste: It’s like a healthy Amercan burger.
 Service: Maclaren Burger is a self-service restaurant.
 Recommend dishes: fresh burger, nashville hot chicken burger
 One line review:  You can feel nostalgic by eating food from another country.
-Moon’s One line review: You can feel nostalgic by eating food from another
-country.
-“The patty is well cooked”`,
+Moon’s One line review: You can feel nostalgic by eating food from another country. “The patty is well cooked”`,
         "placeid": "1944716264",
         "category": "american",
         "mspick": true
@@ -96,8 +93,7 @@ Taste: The noodles are chewy, and the broth has a rich, deep flavor.
 Service: Grilled eggs are served as a side dish.
 Recommend dishes:  순한 맛(mild taste), Order rice and eat it with chicken noodles
 One line review: This restaurant offers a filling meal at a reasonable price.
-Moon’s One line review: This restaurant offers a filling meal at a reasonable
-price. “Wait, it’s me, Chicken!”`,
+Moon’s One line review: This restaurant offers a filling meal at a reasonable price. “Wait, it’s me, Chicken!”`,
         "placeid": "1575958333",
         "category": "korean",
         "mspick": true
@@ -151,7 +147,7 @@ Price: The price is expensive, but size is big
 Taste: little bit salty, Spicy and smoky slices add a bold kick
 Service: self order service
 Recommend dishes:  Pepperoni,bulgogi
-One line review:Good mood  good food
+One line review: Good mood, good food
 `,
         "placeid": "552019785",
         "category": "american"
@@ -178,8 +174,7 @@ Price: It's very expensive.
 Taste: Japanese style pork cutlet is very soft.
 Service: Sometimes the owner prepares different food as a service.
 Recommendation dishes: hirektsu, los katsu
-One line review: Recommend if you want to go to a pork cutlet restaurant with a nice
-atmosphere.`,
+One line review: Recommend if you want to go to a pork cutlet restaurant with a nice atmosphere.`,
         "placeid": "1909851296",
         "category": "japanese"
     }
