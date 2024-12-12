@@ -100,7 +100,7 @@
         let fpdata;
         function showHelp() {
             fpindex=0;
-            fetch("./popupinner.json?acb")
+            fetch("./popupinner.json?acbd")
             .then(data=>{
                 data.json()
                 .then(data=>{
@@ -147,7 +147,7 @@
             }
         });
         async function loadData() {
-            let data = await fetch("./pin.json?acb");
+            let data = await fetch("./pin.json?acdb");
             return await data.json();
         }
         naver.maps.Event.addListener(map, "click dragend tap touchend pinchend mouseup", function (e) {
