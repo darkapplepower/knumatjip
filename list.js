@@ -167,7 +167,7 @@ One line review: Great for a meal!`,
     {
         "addressko": "강원 춘천시 우석로67번길 12 1층",
         "addressen": "1st floor 12 Wooseok-ro 67beon-gil Chuncheon-si Gangwon-do",
-        "name": "People's club",
+        "name": "Peoples club",
         "des": `Location: 1st floor 12 Wooseok-ro 67beon-gil Chuncheon-si Gangwon-do
 Price: It's very expensive.
 Taste: Japanese style pork cutlet is very soft.
