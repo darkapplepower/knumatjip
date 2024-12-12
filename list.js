@@ -32,7 +32,7 @@ One line review: This is a restaurant worth visiting.`,
         "name": "Jukhyang",
         "des": `Location: Hyoje-gil Chuncheon-si Gangwon-do
 Price: All main menus are cheap and plentiful.
-Taste: It taste like old Jjajangmyeon.
+Taste: It's taste like old Jjajangmyeon.
 Service: Water and Side dishes are self-service. Payment is made at once.
 Recommend dishes:Jjajangmyeon
 One line review: Spicy Jjajangmyeon is not recommended for Americans because it is very spicy.`,
